@@ -146,6 +146,7 @@ module.exports = {
             include: paths.appSrc,
             loader: require.resolve('babel-loader'),
             options: {
+              // 改过了，增加antd按需加载
               plugins: [
                 // ['import', { libraryName: 'antd', style: 'css' }],
                 ['import', [{ libraryName: 'antd', style: true }]],
@@ -161,6 +162,8 @@ module.exports = {
           // "style" loader turns CSS into JS modules that inject <style> tags.
           // In production, we use a plugin to extract that CSS to a file, but
           // in development "style" loader enables hot editing of CSS.
+
+          // 改过了，增加less支持
           {
             test: /\.less$/,
             use: [
@@ -200,6 +203,7 @@ module.exports = {
                 loader: require.resolve('css-loader'),
                 options: {
                   importLoaders: 1,
+                  // 增加css module支持
                   modules: true
                 },
               },
@@ -228,25 +232,14 @@ module.exports = {
           // "file" loader makes sure those assets get served by WebpackDevServer.
           // When you `import` an asset, you get its (virtual) filename.
           // In production, they would get copied to the `build` folder.
-          // This loader don't uses a "test" so it will catch all modules
+          // This loader doesn't use a "test" so it will catch all modules
           // that fall through the other loaders.
           {
             // Exclude `js` files to keep "css" loader working as it injects
             // it's runtime that would otherwise processed through "file" loader.
             // Also exclude `html` and `json` extensions so they get processed
             // by webpacks internal loaders.
-            // exclude: [/\.js$/, /\.html$/, /\.json$/],
-            exclude: [
-              /\.html$/,
-              /\.(js|jsx)$/,
-              /\.css$/,
-              /\.less$/,
-              /\.json$/,
-              /\.bmp$/,
-              /\.gif$/,
-              /\.jpe?g$/,
-              /\.png$/,
-            ],
+            exclude: [/\.js$/, /\.html$/, /\.json$/],
             loader: require.resolve('file-loader'),
             options: {
               name: 'static/media/[name].[hash:8].[ext]',
