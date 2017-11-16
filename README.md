@@ -1,5 +1,5 @@
 # updated
-react 16.0.0
+add react-hot-loader (热替换)
 
 # react-starter-kit
 a react program starter kit
@@ -9,6 +9,8 @@ a react program starter kit
 * add antd react-router-dom less
 * enable CSS Modules
 * extend meta
+* use react-hot-loader
+* add mobx
 
 ## usage
 * `npm i`
