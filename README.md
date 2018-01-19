@@ -1,5 +1,7 @@
 # updated
-add react-hot-loader (热替换)
+* add react-hot-loader (热替换)
+* disable CSS Modules
+* add mobx good pratices
 
 # react-starter-kit
 a react program starter kit
@@ -7,7 +9,6 @@ a react program starter kit
 ## features
 * eject create-react-app
 * add antd react-router-dom less
-* enable CSS Modules
 * extend meta
 * use react-hot-loader
 * add mobx

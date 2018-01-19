@@ -1,0 +1,43 @@
+.App {
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  background: #eee;
+  /* background-image: radial-gradient(tan 30%, transparent 0); */
+      /* background-image: linear-gradient(45deg, #bbb 25%, transparent 0),
+      linear-gradient(45deg, transparent 75%, #bbb 0),linear-gradient(45deg, #bbb 25%, transparent 0),
+      linear-gradient(45deg, transparent 75%, #bbb 0); */
+  background-image: linear-gradient(45deg, transparent 75%, #bbb 0);
+
+  /* background-position: 0 0, 15px 15px, 15px 15px, 30px 30px; */
+  background-size: 2rem 2rem;
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .App {
+      background-color: red;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .App {
+      background-color: yellow;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .App {
+      background-color: blue;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .App {
+      background-color: rebeccapurple;
+  }
+}
