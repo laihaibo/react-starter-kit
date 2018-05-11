@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import { computed } from 'mobx';
-import { inject, observer } from 'mobx-react';
+import { hot } from 'react-hot-loader';
 
-import Entry from '../../containers/Entry';
+import Dashboard from '../../containers/Dashboard';
+import Days from '../../containers/Days';
 
 import './index.css';
 
-@inject('uiStore')
-@observer
 class App extends Component {
-  @computed get uiStore() {
-    return this.props.uiStore;
-  }
-
   render() {
     return (
       <div className="App">
-        {this.uiStore.show.entry && <Entry />}
+        <Dashboard />
+        <Days />
       </div>
     );
   }
 }
 
-export default App;
+export default hot(module)(App);
+// export default App;

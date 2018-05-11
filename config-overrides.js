@@ -9,12 +9,15 @@ const rewireLess = require('react-app-rewire-less');
 module.exports = function override(config, env) {
   // do stuff with the webpack config...
 
-  config = rewireMobX(config,env);
+  config = rewireMobX(config, env);
   // antd
-  config = injectBabelPlugin(['import', { libraryName: 'antd', style: true }], config);
+  config = injectBabelPlugin(
+    ['import', { libraryName: 'antd', style: true }],
+    config
+  );
 
   config = rewireLess.withLoaderOptions({
-    modifyVars: { "@primary-color": "#1DA57A" },
+    modifyVars: { '@primary-color': '#1DA57A' }
   })(config, env);
 
   config = rewireReactHotLoader(config, env);

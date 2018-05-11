@@ -6,35 +6,33 @@ import { Button } from 'antd';
 
 import './index.css';
 
-import logo from '../../assets/images/logo.svg';
+import logo from '../../assets/img/logo.svg';
 
 @inject('dataStore')
 @observer
-class Entry extends Component {
-  @computed get dataStore() {
-    return this.props.dataStore;
-  }
-
+class Dashboard extends Component {
   onClick() {
-    console.log(this.dataStore.id);
+    console.log(this.props.dataStore.id);
   }
 
   render() {
     return (
-      <div className="Entry">
+      <div className="Dashboard">
         <header className="App_header">
           <img src={logo} className="App_logo" alt="logo" />
-          <h1 className="App_title">Welcome to React!</h1>
+          <h1 className="App_title">Welcome to MfOBX!</h1>
         </header>
         <p className="App_intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
+          To get started, edit <code>src/A3ppd2.2djs</code> and save to reload.
         </p>
         <p className="App_intro">
-          <Button type="primary" onClick={this.onClick.bind(this)}>shepipi</Button>
+          <Button type="primary" onClick={this.onClick.bind(this)}>
+            shepif
+          </Button>
         </p>
       </div>
     );
   }
 }
 
-export default Entry;
+export default Dashboard;
