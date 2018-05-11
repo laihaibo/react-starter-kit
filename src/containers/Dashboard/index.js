@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { computed } from 'mobx';
 import { inject, observer } from 'mobx-react';
 
 import { Button } from 'antd';

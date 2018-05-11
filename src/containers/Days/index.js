@@ -1,14 +1,28 @@
 import React, { Component } from 'react';
-import dayjs from 'dayjs';
+import { inject, observer } from 'mobx-react';
 
+import { Card, Progress } from 'antd';
+
+@inject('dataStore')
+@observer
 class Days extends Component {
-  componentDidMount() {
-    let f = dayjs().format();
-    console.log(f);
-  }
+  componentDidMount() {}
 
   render() {
-    return <div className="Days">123</div>;
+    return (
+      <div className="Days">
+        <Card style={{ width: 300 }}>
+          <div>2018年已经过了：</div>
+          <div>
+            <Progress
+              type="circle"
+              percent={this.props.dataStore.pasted}
+              status="active"
+            />
+          </div>
+        </Card>
+      </div>
+    );
   }
 }
 

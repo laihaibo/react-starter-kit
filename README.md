@@ -1,7 +1,9 @@
-# updated
-* add react-hot-loader (热替换)
-* disable CSS Modules
-* add mobx good pratices
+# updated 2018.5.11
+* 更新mobx v4
+* 更新store以及初始化方式
+* 更新hot-lodaer
+* others更新
+
 
 # react-starter-kit
 a react program starter kit
