@@ -1,35 +1,22 @@
 /*
  * @Author: laihaib
- * @Date: 2018-01-19 15:53:34
+ * @Date: 2018-06-25 15:40:38
  * @Last Modified by: laihaib
- * @Last Modified time: 2018-05-11 14:14:47
+ * @Last Modified time: 2018-06-25 15:46:39
  */
 
 import { observable, action, computed } from 'mobx';
 
-import { START, END, NOW, getRange } from '../untils/times';
+import { UserModel } from '../model/UserModel';
 
-import api from '../api';
-
-import Models from '../model/index';
-
-const { MeModel } = Models;
+import { users } from '../api';
 
 class DataStore {
+  @observable users = [];
   @observable me = {};
 
-  @observable startToNow;
-
-  @observable startToEnd;
-
-  @observable nowToEnd;
-
   constructor() {
-    this.init(api.data);
-
-    this.nowToEnd = getRange(NOW, END);
-    this.startToEnd = getRange(START, END);
-    this.startToNow = getRange(START, NOW);
+    this.updateUsers(users);
   }
 
   @computed
@@ -37,14 +24,9 @@ class DataStore {
     return this.me.uuid;
   }
 
-  @computed
-  get pasted() {
-    return parseFloat((this.startToNow / this.startToEnd * 100).toFixed(2), 10);
-  }
-
   @action
-  init({ me }) {
-    this.me = new MeModel(me);
+  updateUsers(arr) {
+    this.users = arr.map(u => new UserModel(u));
   }
 }
 

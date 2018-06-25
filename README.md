@@ -1,9 +1,7 @@
-# updated 2018.5.11
-* 更新mobx v4
-* 更新store以及初始化方式
-* 更新hot-lodaer
+# updated 2018.6.25
+* 更新mobx v5
 * others更新
-
+* enable CSS Modules
 
 # react-starter-kit
 a react program starter kit
