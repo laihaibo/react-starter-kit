@@ -3,7 +3,7 @@ import { inject, observer } from 'mobx-react';
 
 import { Button } from 'antd';
 
-import styles from './index.css';
+import './index.css';
 
 @inject('uiStore')
 @observer
@@ -18,7 +18,7 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div className={styles.Dashboard}>
+      <div className="Dashboard">
         <Button type="primary" onClick={this.onClick}>
           shepi
         </Button>
