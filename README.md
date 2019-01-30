@@ -1,7 +1,5 @@
-# updated 2018.6.25
-* 更新mobx v5
-* others更新
-* enable CSS Modules
+# updated 2019.1.30
+* typescript3 + mobx4
 
 # react-starter-kit
 a react program starter kit

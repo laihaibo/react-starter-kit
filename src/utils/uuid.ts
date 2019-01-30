@@ -1,4 +1,4 @@
-const uuid = () => {
+const uuid = (): string => {
   let uuid = '';
   for (let i = 0; i < 32; i++) {
     const random = (Math.random() * 16) | 0;
