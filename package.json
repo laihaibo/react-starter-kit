@@ -1,6 +1,6 @@
 {
-  "name": "antd-demo-ts",
-  "version": "0.1.0",
+  "name": "react-starter-kit",
+  "version": "19.11.1",
   "private": true,
   "dependencies": {
     "@types/jest": "24.0.23",
