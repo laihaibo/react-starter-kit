@@ -1,12 +1,4 @@
-const {
-  override,
-  addDecoratorsLegacy
-  // enableEslintTypescript
-  // disableEsLint,
-} = require('customize-cra');
-
-module.exports = override(
-  addDecoratorsLegacy()
-  // enableEslintTypescript()
-  // disableEsLint(),
-);
+module.exports = function override(config, env) {
+  // do stuff with the webpack config...
+  return config;
+};
